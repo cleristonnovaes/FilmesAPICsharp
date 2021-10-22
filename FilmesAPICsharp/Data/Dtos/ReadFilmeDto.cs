@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FilmesAPICsharp.Models
+namespace FilmesAPICsharp.Data.Dtos
 {
-    public class Filme
+    public class ReadFilmeDto
     {
         [Key]
         [Required]
@@ -19,7 +19,6 @@ namespace FilmesAPICsharp.Models
         public string Genero { get; set; }
         [Range(1, 600, ErrorMessage = "A duração deve ter no mínimo 1 e no máximo 600 minutos")]
         public int Duracao { get; set; }
-
-
+        public DateTime HoraDaConsulta { get; set; }
     }
 }
